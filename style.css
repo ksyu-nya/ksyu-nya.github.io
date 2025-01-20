@@ -572,12 +572,38 @@ footer {
         text-align: start;
         width: 100%;
     }
+
+    .about_us__wrapper__item p {
+        font-size: 10px;
+        margin: 10px;
+    }
+
+    .about_us__wrapper__item h4 {
+        font-size: calc(5px + 1vmin);
+        margin: 10px;
+    }
+
+    .item__header {
+        min-width: 58px;
+        width: 25%;
+        height: 100%;
+    }
+
+    .item__desc {
+        width: 50%;
+        min-width: 155px;
+    }
+
     .item__image img {
+        width: 70%;
         min-width: 20px;
         margin: 0;
     }
+
+    
     .item__image {
-        margin: 15px;
+        width: 25%;
+        margin: 10px;
     }
 
     .content__main {
@@ -599,5 +625,9 @@ footer {
 
     .plants__card {
         height: auto;
+    }
+
+    .plants__grid {
+        gap: 0;
     }
 }
