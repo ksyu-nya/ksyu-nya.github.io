@@ -119,6 +119,7 @@ img {
 }
 
 header {
+    max-height: 110px;
     width: 100%;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
@@ -139,6 +140,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 105;
+    max-height: 110px;
 }
 .navigation__wrapper img {
     max-width: 150px;
