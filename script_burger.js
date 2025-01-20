@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navBar = document.querySelector('.navigation__bar');
     const navLinks = document.querySelectorAll('.navigation__bar a'); 
     const logoLink = document.querySelector('.navigation__wrapper a');
+    const scrollOffset = 100;
 
     burger.addEventListener('click', () => {
         navBar.classList.toggle('active');
@@ -19,12 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const targetId = this.getAttribute('href'); // id нужного раздела
             const targetSection = document.querySelector(targetId); // нужный раздел по ID
-
+            
             if(targetSection){
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = targetPosition - scrollOffset;
+                 window.scrollTo({
+                   top: offsetPosition,
+                   behavior: 'smooth'
+                 });
             }
 
                 // закрываем меню, если оно открыто
