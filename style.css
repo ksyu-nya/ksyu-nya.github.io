@@ -165,6 +165,11 @@ header {
 .navigation__bar li {
     margin-left: 20px;
     cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.navigation__bar li:hover {
+	color: #577062;
+	
 }
 
 .navigation__right__bar {
