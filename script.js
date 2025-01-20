@@ -27,15 +27,15 @@ class Leaf {
         this.angleSpeed = getRandomNumber(-0.02, 0.02);
         this.opacity = getRandomNumber(0.5, 1);
 
-        this.image.onload = () => {
+        this.image.onload = () => {    //функция, которая выполнится после загрузки изображения, отрисовывая лист на canvas.
           this.draw();
         }
     }
 
     draw() {
         ctx.globalAlpha = this.opacity;
-        ctx.save();
-        ctx.translate(this.x + this.size/2 , this.y + this.size/2);
+        ctx.save();                                                                 //сохранение текущего состояния canvas.
+        ctx.translate(this.x + this.size/2 , this.y + this.size/2);     //перемещение центра системы координат в центр листа
         ctx.rotate(this.angle);
         ctx.drawImage(this.image, -this.size/2, -this.size/2, this.size, this.size);
         ctx.restore();
@@ -64,7 +64,7 @@ function createLeaves(count) {
 
 
 function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height); //очищаем перед каждым кадром наш канвас
     leaves.forEach(leaf => {
         leaf.update();
         leaf.draw();
