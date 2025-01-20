@@ -116,7 +116,13 @@ img {
     min-width: 85px;
     margin: auto;
     color: aliceblue;
+    transition: all 0.3s ease-in-out;
 }
+.button_buy:hover {	
+background-color: #357a47;
+transition: all 0.3s ease-in-out;
+}
+
 
 header {
     max-height: 110px;
